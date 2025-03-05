@@ -43,6 +43,16 @@ own server for free!** [[Drop a message to info@alextselegidis.com]](mailto:info
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) 
 (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
+If in macos, do:
+
+```bash
+brew install --cask docker
+brew install docker-compose
+```
+Then start Docker in the MacOS Apps.
+
+In the Terminal:
+
 ```bash
 # Clone this repository
 $ git clone https://github.com/alextselegidis/plainpad.git
@@ -50,8 +60,27 @@ $ git clone https://github.com/alextselegidis/plainpad.git
 # Go into the repository
 $ cd plainpad
 
+cp server/.env.example server/.env
+
 # Start Docker 
 $ docker compose up -d
+
+$ docker exec -it plainpad-php-fpm-1 /bin/bash
+```
+
+Now inside Docker container, run:
+```bash
+
+php /var/www/html/server/artisan db:seed
+
+#cd /var/www/html
+#npm install
+
+cd /var/www/html/client
+npm install
+npm start &
+
+
 ```
 
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
