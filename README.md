@@ -52,6 +52,7 @@ brew install docker-compose
 Then start Docker in the MacOS Apps.
 
 In the Terminal:
+Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
 ```bash
 # Clone this repository
@@ -82,8 +83,10 @@ npm start &
 
 
 ```
+now open http://localhost
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+Use default user admin@example.org and password 12345678 to login.
+
 
 
 ## License 
